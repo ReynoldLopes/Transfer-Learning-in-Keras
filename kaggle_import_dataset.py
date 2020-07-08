@@ -7,10 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1ULJwi_GElXe6GhK-oTGwMOmp14wy66Wm
 """
 
-!pip install kaggle
+!pip install kaggle #since i'll be using dataset from keras 
 
 from google.colab import files
-files.upload()
+files.upload() #using Google colab
 
 !mkdir -p ~/.kaggle
 !cp kaggle.json ~/.kaggle/
@@ -19,7 +19,7 @@ files.upload()
 
 !kaggle datasets download -d pmigdal/alien-vs-predator-images
 
-from zipfile import ZipFile
+from zipfile import ZipFile          #extracting the zip file
 file_name='alien-vs-predator-images.zip'
 with ZipFile(file_name,'r') as zip:
   zip.extractall()
@@ -102,7 +102,4 @@ model.predict(image)
 
 
 
-from tkinter import *
-
-root= Tk()
 
